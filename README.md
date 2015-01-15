@@ -22,6 +22,7 @@ The Data Lifecycle:
   question (curation (deciding which data sources to use & how), triage (i.e. prioritization), persistence, and preservation of data) -> collection (may include generation) -> clean-up -> storage -> processing/analysis -> query, visualize, & act upon data
   
 most user interaction with big data is through web apps
+
 http request types: GET, POST, PUT, DELETE
 request-response cycle 
 
@@ -59,4 +60,13 @@ REST (representation state transfer) is an architecture used for building servic
   - DELETE is destroy operation
   
 Sinatra is a tool that provides a pretty simple way to start prototyping webapps
+
 checkout contacts (on course site) for an example web service implementation 
+
+
+**things to consider**
+- where are you storing the info (database?)?
+- how do you do IDs?
+- what input do you take for POST, PUT, DELETE?
+- what is the output format?
+- how do you handle errors?
