@@ -24,3 +24,17 @@ The Data Lifecycle:
 most user interaction with big data is through web apps
 http request types: GET, POST, PUT, DELETE
 request-response cycle 
+
+***
+
+##Lecture 2 (Jan. 15th)
+GitHub Markdown
+  generally, Markdown converts plaintext to richtext
+  - use pound symbol to create headers
+  - for italics, use asterisks or underscore around text
+  - for bols, use double asterisks or underscores
+  - use asterisk and space to create bullet points
+  - use numbers for ordered lists
+  - use 3 back ticks ``` to open and close code blocks; specify code language after opening ticks to highlight text
+  - pipes define columns for tables
+  - 3 hypens, asterisks or underscores create a horizontal line across the page
