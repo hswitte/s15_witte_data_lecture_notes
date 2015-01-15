@@ -57,3 +57,6 @@ REST (representation state transfer) is an architecture used for building servic
   - POST is a create operation (passes data and updates the resource)
   - PUT is an update (updates a particular ID of the resource)
   - DELETE is destroy operation
+  
+Sinatra is a tool that provides a pretty simple way to start prototyping webapps
+checkout contacts (on course site) for an example web service implementation 
