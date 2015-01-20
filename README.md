@@ -70,3 +70,37 @@ checkout contacts (on course site) for an example web service implementation
 - what input do you take for POST, PUT, DELETE?
 - what is the output format?
 - how do you handle errors?
+
+##Lecture 3 (Jan. 20th)
+
+Restful web services
+
+Rest is an approach to developing web services that mimics the design of the web itself
+- for each resource, you can perform operations on it similar to the main operations/methods of HTTP
+- best practice: put version number in url (prevents conflicts with future updates/versions)
+- generally send data in JSON format (javascript object notation)
+- for GET, data may appear as query params
+- if a request needs to be authenticated, the authentication data appears in the HTTP headers
+
+How are operations on two resources handled?
+- GET /api/1.0/posts/0/comments/1  (gets 1st comment on post 0)
+- POST /api/1.0/posts/0/comments (creates new comment on post 0)
+- alternate approach: while performing an operation on one resource, you reference other resources (by id) in the data that is sent with the request)
+- 
+
+issues
+- security: how to authenticate users
+- identity: how are IDs assigned to resources
+- failure: how do we handle failures?
+-- can handle in JSON, HTTP status codes (404, 500, etc.), or a combination of the two
+- persistence: how to store resources
+
+- sinatra- handle HTTP requests & send data back (web-service framework) (in service.rb)
+- rspec- testing framework that uses behavioral-driven design (can find online resources for things that can be tested with rsped) (in test files)
+- typhoeus- ruby lib-curl library
+- node- server-side javascript (wrapper around chrome web browser)
+- express- framework for node
+
+sinatra-style: create own class as sub-class of Sinatra::Base
+
+goal of web-services: to implement a service in any language/framework and allows clients to use that service in any language/framework (i.e. standardize on messages)
