@@ -104,3 +104,68 @@ issues
 sinatra-style: create own class as sub-class of Sinatra::Base
 
 goal of web-services: to implement a service in any language/framework and allows clients to use that service in any language/framework (i.e. standardize on messages)
+
+##Lecture 4 (Jan. 22nd)
+GIT
+
+workflow 
+untracked - not in repo
+unmodified- not changed since current head
+modified- changed since head
+staged
+
+git branch commands do not move you into that branch...use git checkout
+git checkout *commit* (move the current state of your copy to a particular commit)
+git merge *branch_name* (merges the named branch into the current branch)
+
+how to resolve conflicts: 
+remove markers & choose lines of code which should not be in the result of the merge
+
+git status lets you see status of files in repo; -b tag also provides name of current branch
+
+non-tracked files: 
+executables 
+use file called .gitignore 
+	all file paths relative to the ignore file
+	*.exe will ignore all executables
+	foo is a file; foo/ is a directory
+
+additional commands:
+log
+remote
+stash
+rebase (changes how branches are related)
+diff
+fetch (gets changes, but doesn't integrate them)
+reset (move current head)
+tag
+mv (mofes file location within a repo)
+rm (stops tracking changes to file)
+
+pull, merge, pull
+if you branched a repo, and changes were made to the master before you merge the branches, 
+checkout new branch, do git merge master to get changes to master on the new branch. Fix merge conflicts, do another git merge master to make sure that no further commits were made to master. Then checkout master branch and do git merge new_branch to get all of the changes in the other branch into the master branch
+
+
+GITHUB
+use branches, not rebasing in order to accurately represent history
+master represents production-ready code; use new branches to add features
+pull request- use @mention ; 
+fork is an exact copy of a repo (useful if you don't have collaborator access to repo)
+github has keywords in commit messages (look online for resources) for example, 'close #xx' might close an issue that had been previously brought up
+
+github.com/zandrr/pull_requests_demo   (try forking repo & doing a pull request)
+
+
+Ken's demo
+epic-analytics.cs.colorado.edu:4000
+you know there is an endpoint called api/1.0/methods
+i.e. epic-analytics.cs.colorado.edu:4000/api/1.0/methods
+curl http://epic-analytics.cs.colorado.edu:4000/
+
+make sure that I have curl installed for tuesday (or some networking library, such as typheous)
+
+javascript implementation of the contacts service
+if you type node *enter* in cmd line, you get a javascript prompt (lets you play with js outside of browser)
+node is wrapper of chrome js implementation
+node creates a module for js, so that you are not writing into the global namespace, avoiding any potential problems that could occur from that
