@@ -169,3 +169,53 @@ javascript implementation of the contacts service
 if you type node *enter* in cmd line, you get a javascript prompt (lets you play with js outside of browser)
 node is wrapper of chrome js implementation
 node creates a module for js, so that you are not writing into the global namespace, avoiding any potential problems that could occur from that
+
+##Lecture 5 (Jan. 27th)
+checkout active record for ruby data storage (or maybe sqllite or mongo for homework1)
+node.js (functional programming language)
+
+most code is packaged in a module (http is a core module)
+
+http provides a function called createServer() that implements server's behavior (the .listen() function starts the server)
+
+can create in-line anonymous functions
+
+console.log == 'printf() of the jafascript world'
+
+node shuts down when there is no future work to be done... in this case, the .listen() function will loop forever
+
+event loop: uses handlers, ie. write code that says "when event x happens, do y" 
+
+process.nextTick() : don't process things in the current event loop, process them during the next event loop
+
+setImmediate() is similar to .nextTick() but process.nextTick() will prioritize your function before IO-related callbacks (possibly causing IO starvation); with setImmediate() the IO is processed before starting the next event loop
+
+setTimeout() takes a parameter that specifies how long to wait before function is executed
+
+setInterval() takes param that specifies the interval at which the function is executed (if interval is never turned off, the program will execute forever)
+
+callback hell: where callbacks get indented; to solve: 1) use synchronous functions (frowned upon; this can cause delays in running system, because the system waits until each synchronous call is done executing), or 2) use named callback functions (define functions individually & refer to them by name later in code)
+
+closure: reference variable that is not in the function (i.e. outside of scope); function will allow you to pass in some params that get 'remembered', so that you can later use that function and need to only pass in the last param needed
+
+other asynchronous mechanisms: event emitters, promises
+
+for user-written code, node is single threaded (built ontop of librariy called libevent which handles IO in parallel); everything is handled in eventloop
+
+epic-research.cs.colorado.edu:8080/ 
+/api/1.0/methods
+steps:
+
+curl .../1.0/methods
+
+curl .../1.0/first
+
+curl .../1.0/second
+
+curl .../1.0/third
+
+curl .../1.0/what
+
+curl  -X POST --data '{"value":1000, "author": "Heather"}" .../1.0/answer
+
+cu-data-engineerint-s15.github.io/lecture_05
