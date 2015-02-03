@@ -219,3 +219,26 @@ curl .../1.0/what
 curl  -X POST --data '{"value":1000, "author": "Heather"}" .../1.0/answer
 
 cu-data-engineerint-s15.github.io/lecture_05
+
+##Lecture 7 (Feb. 3rd)
+Angular JS (version 1.3; version 2.0 will be released soon & may be very different)
+
+- client-side web app framework
+- designed to live on top of JSON_based RESTful web services
+- Data bindings; value of HTML tag can be associated w/ model object; when one changes, angular will update the others
+- Controllers; defines all states and methods that can be accessed within that section of the page. Allows you to modularize your web app.
+- Services; use if you need to maintain state between invocations of a controll, or if you need to share state between two different controllers (created when angular app is initialized & remain in place for entire life of app)
+- Directives; allows angular to integrate into HTML in a natural way, but can also be used to create reusable components that combine controllers, data and HTML
+- Embeddable; can control as much or as little of web page as you want. 
+- Injectable; rather than use a main route to wire everything together, Angular rontrollers and services declare their dependencies up front; then it is up to the angular run-time system to locate the dependencies and inject them into the appropriate areas
+- 
+-modules:
+```angular.module('contactsApp', []) ```
+- this creates a module called contactsApp which has no dependencies
+- this returns the previously created module: ```angular.module('contactsApp')```
+- ng-show displays HTML if condition is true
+- ng-hide hides HTML element if condition is true
+- ng-repeat iterates over a collection
+
+
+Book: AngularJS UP & Running
