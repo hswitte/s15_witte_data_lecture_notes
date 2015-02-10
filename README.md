@@ -242,3 +242,44 @@ Angular JS (version 1.3; version 2.0 will be released soon & may be very differe
 
 
 Book: AngularJS UP & Running
+
+--Lecture 9 (Feb. 10th)
+
+Checkout gist about this vs. self in javascript
+- default binding
+- implicit binding
+- explicit binding
+
+books:
+- principles of object-oriented javascript
+- secrets of the javascript ninja
+
+this always points to the context of the currently executing function (what function calls it, not necessarily scope)
+
+in javascript, blocks do not create scope, functions create scope
+
+
+http://solutionoptimist.com/2013/09/30/requirejs-angularjs-dependency-injection/
+
+
+requireJS:
+- load single js file in index.html (i.e. RequireJS)
+- all files loaded by requireJS are loaded in parallel
+
+
+immediately invoked function expression (IIFE):
+- define a function & call it immediately
+
+
+Getting data from twitter:
+- first, create a twitter account
+- https://dev.twitter.com
+- when creating a new app, use my github url for website...
+- permissions --> change to read & write
+- keys & access tokens --> 'create my access token'
+- on dev.twitter.com --> developers/documentation/rest apis
+
+
+
+
+
