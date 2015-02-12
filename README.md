@@ -279,6 +279,18 @@ Getting data from twitter:
 - keys & access tokens --> 'create my access token'
 - on dev.twitter.com --> developers/documentation/rest apis
 
+##Lecture 10 (Feb. 12)
+- consumer key ids a particular app/developer
+- access token ids a particular user
+- an app may act on behalf of many users (you may ship app with consumer keys but no access tokens)
+- when you create twitter app and generate access token, you short-circuit the web-based authentication process
+ 
+- recommendation: use rbenv to manage ruby (allows you to easily manage multiple ruby installations)
+- see slides for instructions to get this all set up
+- in ruby, .fetch will throw an error if the info it is fetching is not there
+- ruby strings are mutable; typhoeus prefers immutable strings as keys
+
+-check out jq tool
 
 
 
