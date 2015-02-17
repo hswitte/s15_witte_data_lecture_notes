@@ -292,6 +292,25 @@ Getting data from twitter:
 
 -check out jq tool
 
+## Lecture 11 (Feb. 17th)
 
+Twitter data collection framework
+
+twitter_framework repo on course website has all of the code needed to collect twitter data
+- automatically handles twitter rate limits
+- implements techniques described in 'working with timelines' and 'working with cursors' sections of the twitter api documentation
+- 'NotImplementedErrer' is a standard used in ruby
+- tweet ids are very large (~64 bit, larger than max ints allowed in java)
+- twitter queries use 'sentiment-analysis', i.e. if you query something and add ':)' you get positive tweets about that something
+- twitter uses '\r\n' at message boundaries
+- streaming api represents ~1% of all tweets; streaming api has no rate limit
+- ruby ../apps/get_tweets.rb -p ../oauth.properties kenbod
+- ruby ../apps/(filenae) -h will tell you what args the file wants
+- ruby ../apps/find_tweets.rb --props ../oauth.properties 'movie -scary :)' (this finds tweets that have the word movie, not the word scary, and are positive)
+- ruby ../apps/get_followers.rb --props ../oauth.properties username (will get all the userids that are following the requested user)
+
+
+There is a description for homework 3 
+checkout the twitter rest api documentation page & find one of the GET or POST requests for ideas
 
 
