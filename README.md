@@ -313,4 +313,22 @@ twitter_framework repo on course website has all of the code needed to collect t
 There is a description for homework 3 
 checkout the twitter rest api documentation page & find one of the GET or POST requests for ideas
 
+##Lecture 12 (Feb. 19th)
 
+Intro to NoSQL
+
+- Books: Big Data: Principles and best practices of scalable realtime data systems; Making Sense of NoSQL: A guide for managers and the rest of us
+- vertical scaling
+- sharding a database: need multiple copies of the database & partition data across those databases 
+- scaling relational databases introduces significant complexities to the back-end (fault tolerance is hard; complexity is pushed to the application layer; lack of human fault tolerance; maintenance is a lot of work)
+- NoSQL databases are aware of their distributed nature; they manage sharding and replication for you & are horizontally scalable
+- NoSQL databases avoid mutable data
+- service tier/application code is completely unaware of any resharding etc. that goes on behind-the-scenes
+- types of NoSQL: key-value, graphs, columnar, documents
+- key-value: when presented with a string (key) will return an arbitrarily large set of data (value); there is no query language; just acts like a hash table (ex: amazon simple db, s3, redis, voldemort, riak)
+- graph: optimized to store graph structures; provides structural query languages (ex: neo4j, titan, infinite graph, infogrid)
+- columnar - aka column family stores; can scale to enormous amounts of data; column family is a table & consists of rows that have unique row keys, rows consist of columns, columns consist of a key and a value; basically a distributed hash table which is easy to partition across the nodes of a cluster (ex: cassandra, hbase)
+- document: similar to key-value store; insert documents (a bag of key-value pairs) & each document is indexed in various ways; documents can then be queried on an attribute; documents can be grouped into collections, collections can be grouped into databases (ex: mongodb, couchdb, solr/lucene)
+
+
+-in NoSQL, there is no schema; you are free to store anything in the database (no specification of data-type)
