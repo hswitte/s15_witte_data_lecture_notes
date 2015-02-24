@@ -332,3 +332,11 @@ Intro to NoSQL
 
 
 -in NoSQL, there is no schema; you are free to store anything in the database (no specification of data-type)
+
+##Lecture 13 (Feb. 24th)
+
+
+CouchDB
+- Is a Document NoSQL database, implemented in erlang
+- book: couchdb: the definitive guide (freely available online)
+- see online notes
