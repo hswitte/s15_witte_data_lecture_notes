@@ -340,3 +340,12 @@ CouchDB
 - Is a Document NoSQL database, implemented in erlang
 - book: couchdb: the definitive guide (freely available online)
 - see online notes
+
+##March 5th
+
+MongoDB indexes
+- slides have a lot of useful info on using mongo
+- the admin database is hidden
+- JSON stores timestamps as strings; need to change this to a time object before putting it into mongo (use ruby method DateTime.parse; ruby changes to your own timezone; call utc() to fix this)
+- db.tweets.getIndexes() 
+- indexes allow us to sort tweets & run queries faster
