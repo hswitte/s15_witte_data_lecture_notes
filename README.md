@@ -349,3 +349,16 @@ MongoDB indexes
 - JSON stores timestamps as strings; need to change this to a time object before putting it into mongo (use ruby method DateTime.parse; ruby changes to your own timezone; call utc() to fix this)
 - db.tweets.getIndexes() 
 - indexes allow us to sort tweets & run queries faster
+
+##March 10th
+
+
+MongoDB continued
+- index cardinality is number of possible values for an indexed field; generally, want indexes on high cardinality fields
+- types of queries: point queries (search for single value, then traverse index in either direction), multi-value queries (search for range of values)
+- can create index using geoJSON; need to create this as a geographic index (use 2dsphere), otherwise it will index as a string
+
+
+map reduce 
+- creates new collections from old collections
+- takes 2 functions: a map function & a reduce function
